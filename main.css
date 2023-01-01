@@ -6,10 +6,13 @@ html, body {
 div.ingredient {
     padding: 0.3rem;
     font-family: Verdana 12pt;
+
+    margin: 0.1rem;
+    background-color: #eee;
 }
 
-.active {
-    background-color: #2FC;
+div.ingredient.active {
+    background-color: #84D966;
 }
 
 
