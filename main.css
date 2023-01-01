@@ -1,0 +1,69 @@
+
+html, body {
+    font-family: verdana, sans-serif;
+}
+
+div.ingredient {
+    padding: 0.3rem;
+    font-family: Verdana 12pt;
+}
+
+.active {
+    background-color: #2FC;
+}
+
+
+div.main {
+    display: flex;
+}
+
+
+div.ingredients {
+    flex-wrap: wrap;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30vw;
+}
+
+div.pot {
+    padding: 0.5rem;
+    border: 1px solid black;
+    margin: 0.5rem;
+}
+
+div.results {
+    display: flex;
+}
+
+div.title {
+    display: flex;
+    color: white;
+}
+
+div.title div {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.title .vigor {
+    background-color: #b42323;
+}
+
+div.title .spirit {
+    background-color: #1313ca;
+}
+
+.ingredient.button button {
+    font-family: Verdana;
+    font-size: 12pt;
+}
+
+div.title .sophistication {
+    background-color: #9c9c17;
+}
+
+div.header {
+    text-align: center;
+}

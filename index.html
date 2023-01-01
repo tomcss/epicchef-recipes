@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+    <script src=main.js></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <div class=main id='app'>
+        <div class="ingredients">
+
+            <div class='ingredient' :class="{ active: ingredient.include}" v-for="ingredient in ingredients">
+                <div
+                    @click="toggleIngredient( ingredient.name)">
+                    {{ingredient.name}}
+                </div>
+            </div>
+
+
+            <div class="ingredient button">
+                <button type=button @click='saveFilter()'>Save Filter</button>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class='vigor'>
+                <div class="header">
+                    VIGOR
+                </div>
+                <div v-for="pot of vigorPots()" class='pot vigor-pot'>
+
+                    <div class="title">
+                        <div class="vigor">{{ pot.vigor }}</div>
+                        <div class="spirit">{{ pot.spirit }}</div>
+                        <div class="sophistication">{{ pot.sophistication }}</div>
+                    </div>
+
+                    <div v-for="ing of pot.ingredients">
+                        {{ing.name}}
+                    </div>
+                </div>
+
+            </div>
+            <div class='spirit'>
+
+                <div class="header">
+                    SPIRIT
+                </div>
+
+                <div v-for="pot of spiritPots()" class='pot spirit-pot'>
+
+                    <div class="title">
+                        <div class="vigor">{{ pot.vigor }}</div>
+                        <div class="spirit">{{ pot.spirit }}</div>
+                        <div class="sophistication">{{ pot.sophistication }}</div>
+                    </div>
+
+                    <div v-for="ing of pot.ingredients">
+                        {{ing.name}}
+                    </div>
+                </div>
+
+            </div>
+            <div class='sophistication'>
+                <div class="header">
+                    SOPHISTICATION
+                </div>
+
+                <div v-for="pot of sophisticationPots()" class='pot sophistication-pot'>
+
+                    <div class="title">
+                        <div class="vigor">{{ pot.vigor }}</div>
+                        <div class="spirit">{{ pot.spirit }}</div>
+                        <div class="sophistication">{{ pot.sophistication }}</div>
+                    </div>
+
+                    <div v-for="ing of pot.ingredients">
+                        {{ing.name}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
