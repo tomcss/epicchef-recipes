@@ -38,6 +38,10 @@ div.results {
     display: flex;
 }
 
+div.results > div {
+    min-width: 12vw;
+}
+
 div.title {
     display: flex;
     color: white;
