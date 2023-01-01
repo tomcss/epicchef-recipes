@@ -15,11 +15,10 @@ div.ingredient.active {
     background-color: #84D966;
 }
 
-
 div.main {
     display: flex;
+    justify-content: space-around;
 }
-
 
 div.ingredients {
     flex-wrap: wrap;
@@ -89,3 +88,9 @@ div.header {
     font-weight: bold;
     padding: 0.3rem;
 }
+
+
+div.instructions {
+    margin-bottom: 2rem;
+}
+
