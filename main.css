@@ -26,7 +26,7 @@ div.ingredients {
     max-height: 100vh;
     display: flex;
     flex-direction: column;
-    flex-basis: 30vw;
+    flex-basis: 40vw;
 }
 
 div.pot {
@@ -50,8 +50,20 @@ div.title div {
     font-weight: bold;
 }
 
+div.pot {
+    background-color: #fff;
+}
+
+div.vigor {
+    background-color: #b42323;
+}
+
 div.title .vigor {
     background-color: #b42323;
+}
+
+div.spirit {
+    background-color: #1313ca;
 }
 
 div.title .spirit {
@@ -67,6 +79,13 @@ div.title .sophistication {
     background-color: #9c9c17;
 }
 
+div.sophistication {
+    background-color: #9c9c17;
+}
+
 div.header {
     text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem;
 }
