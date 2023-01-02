@@ -25,6 +25,7 @@ class Pot {
                         this.applySynergy( synergy)
                     }
                 } else if( (this.types & synergy.types) === synergy.types) {
+
                     this.applySynergy( synergy)
                 } 
             }
@@ -36,7 +37,6 @@ class Pot {
         this.vigor += ingredient.vigor
         this.spirit += ingredient.spirit
         this.sophistication += ingredient.soph
-
     }
 
     applySynergy( synergy) {
@@ -160,12 +160,12 @@ function init( data) {
 
             toggleIngredient( name) {
 
-                console.log('toggle', name)
                 ingredients[name].include = !ingredients[name].include
+
+                this.$forceUpdate()
 
                 calculatePots()
 
-                this.$forceUpdate()
             },
             vigorPots() {
                 return pots.sort( (a,b) => b.vigor - a.vigor).slice(0,10)
@@ -176,6 +176,24 @@ function init( data) {
             sophisticationPots() {
                 return pots.sort( (a,b) => b.sophistication - a.sophistication).slice(0,10)
             },
+
+            selectAll() {
+                for(let name in ingredients) {
+                    ingredients[name].include = true
+                }
+                this.$forceUpdate()
+
+                calculatePots()
+            },
+
+            selectNone() {
+                for(let name in ingredients) {
+                    ingredients[name].include = false
+                }
+                this.$forceUpdate()
+                
+                calculatePots()
+            }
         },
         computed: {
 
